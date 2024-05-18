@@ -1,0 +1,45 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+}
+
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: 10px;
+  padding: 10px;
+}
+
+.gallery img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.special-2x1 {
+  grid-column: span 2;
+  grid-row: span 1;
+}
+
+.special-3x1 {
+  grid-column: span 3;
+  grid-row: span 1;
+}
+
+.special-2x2 {
+  grid-column: span 2;
+  grid-row: span 2;
+}
+
+.special-1x2 {
+  grid-column: span 1;
+  grid-row: span 2;
+}
+
+@media (max-width: 768px) {
+  .special-2x1, .special-3x1, .special-2x2, .special-1x2 {
+    grid-column: span 1;
+    grid-row: span 1;
+  }
+}
